@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet"
+      href="{{url_for('static', filename='index.css')}}">
+
+<div class="row justify-content-center">
+  <div class="col-3">
+    <div class="h3 text-center index-title">
+      Welcome!
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-3">
+    <a class="btn btn-primary"
+       href="#"
+       role="button">Learn Five Basic Wrestling Moves</a>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-3">
+    <a class="btn btn-primary"
+       id="btn-knowledge"
+       href="#"
+       role="button">Test Your Knowledge</a>
+  </div>
+</div>
+
+<div id="theaters-list">
+</div>
+
+{% endblock %}
