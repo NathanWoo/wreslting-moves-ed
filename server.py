@@ -44,7 +44,10 @@ def index():
 
 @app.route('/quiz/<question_num>')
 def quiz(question_num=None):
-    return render_template('quiz_mc.html', score=score, question_num=question_num, data=data["gw"])
+    if int(question_num) < 5:
+        return render_template('quiz_mc.html', score=score, question_num=question_num, data=data["gw"])
+    else:
+        return render_template('quiz_sa.html', score=score, question_num=question_num, data=data["gw"])
 
 
 @app.route('/quiz')

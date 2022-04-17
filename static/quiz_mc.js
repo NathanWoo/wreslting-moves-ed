@@ -14,7 +14,7 @@ function display_header() {
 }
 
 function display_video() {
-    $("#video").html("<img src=/media/" + dict["video"] + ">")
+    $("#video").html("<img src=/static/" + dict["video"] + ">")
 }
 
 function display_score() {

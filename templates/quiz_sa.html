@@ -11,7 +11,6 @@
     let current_question = {{ question_num | tojson }}
 </script>
 
-
 <div class="row">
     <div class="col-md-3">
         <div id="score"></div>
@@ -26,26 +25,13 @@
     <div class="col-md-3"></div>
     <div class="col-md-6">
         <div id="video"></div>
-        <div id="options">
+        <div id="short-ans">
             What move is this?
-            <div><input type="radio" name="choice" value="gw" id="gw" checked>
-                <label for="gw">Gut Wrench</label>
-                <span id="gw-feedback"></span>
-            </div>
-            <div><input type="radio" name="choice" value="ps" id="ps">
-                <label for="ps">Penetration Step</label>
-                <span id="ps-feedback"></span>
-            </div>
-            <div><input type="radio" name="choice" value="sla" id="sla">
-                <label for="sla">Single Leg Attack</label>
-            </div>
-            <div><input type="radio" name="choice" value="dla" id="dla">
-                <label for="dla">Double Leg Attack</label>
-            </div>
-            <div><input type="radio" name="choice" value="s" id="s">
-                <label for="s">Sprawl</label>
+            <div>
+                <input type="text">
             </div>
         </div>
+        
     </div>
 
     <div class="col-md-3">
