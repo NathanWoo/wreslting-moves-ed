@@ -10,15 +10,15 @@ $(document).ready(function () {
 })
 
 function display_header() {
-    $("#question-header").text("Question " + question_num + "/10")
+    $("#question-header").text("Question " + current_question + "/10")
 }
 
 function display_video() {
-    $("#video").html("<img src=/media/" + video + ">")
+    $("#video").html("<img src=/media/" + dict["video"] + ">")
 }
 
 function display_score() {
-    q_so_far = parseInt(question_num) - 1
+    q_so_far = parseInt(current_question) - 1
     $("#score").text("Score: " + score + "/" + q_so_far)
 }
 
@@ -39,10 +39,5 @@ function display_incorrect(id) {
 }
 
 function display_popup() {
-    review = get_review()
-    $("#popup").html(review)
-}
-
-function get_review() {
-    return "<div id=review-header>Gut Wrench Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
+    $("#popup").html(dict["review"])
 }
