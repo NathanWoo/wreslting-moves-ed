@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz_mc.js') }}"></script>
+
+<script>
+    let score = {{ score | tojson }}
+    let video = {{ video | tojson }}
+    console.log("video link: " + video)
+    let correct_answer = {{ answer | tojson }}
+    console.log("answer: " + correct_answer)
+    let answers = {{ answer_array | tojson }}
+    let question_num = {{ question_num | tojson }}
+</script>
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div id="score"></div>
+    </div>
+    <div class="col-md-6">
+        <div id="question-header"></div>
+        <div id="video"></div>
+        <div id="options">
+            What move is this?
+            <div><input type="radio" name="choice" value="gw" id="gw" checked>
+                <label for="gw">Gut Wrench</label>
+                <span id="gw-feedback"></span>
+            </div>
+            <div><input type="radio" name="choice" value="ps" id="ps">
+                <label for="ps">Penetration Step</label>
+                <span id="ps-feedback"></span>
+            </div>
+            <div><input type="radio" name="choice" value="sla" id="sla">
+                <label for="sla">Single Leg Attack</label>
+            </div>
+            <div><input type="radio" name="choice" value="dla" id="dla" checked>
+                <label for="dla">Double Leg Attack</label>
+            </div>
+            <div><input type="radio" name="choice" value="s" id="s">
+                <label for="s">Sprawl</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div id="popup"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9">
+    </div>
+    <div class="col-md-3" id="buttons">
+    </div>
+</div>
+</div>
+
+
+
+{% endblock %}
