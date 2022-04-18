@@ -4,14 +4,14 @@
 
 <div class="row justify-content-center">
   <div class="col">
-    #{{learn_data['id']}}: {{learn_data['answer']}}
+    #{{learn_data['id']}}: {{learn_data['name']}}
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-3"></div>
   <div class="col-md-6">
-    <img src={{learn_data['video']}} alt="">
+    <img src={{'/static/' ~ learn_data['video']}} alt="">
   </div>
   <div class="col-md-3">
   </div>
@@ -43,12 +43,12 @@
     <a class="btn btn-primary"
        href={{'/learn/' ~ (learn_data['id'] + 1) }}
        role="button">Next</a>
+    {% elif learn_data['id'] == 5 %}
+    <a class="btn btn-primary"
+       href={{'/quiz/1'}}
+       role="button">Take the quiz</a>
     {% endif %}
   </div>
 </div>
-
-
-
-You're on the learning page
 
 {% endblock %}
