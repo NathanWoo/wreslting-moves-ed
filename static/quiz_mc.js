@@ -16,6 +16,7 @@ $(document).ready(function () {
     $("#submit-button").click(function(e) {
         e.preventDefault();
         which_answer();
+        nextquestion()
     })
 })
 
@@ -60,6 +61,12 @@ function check_answer(info) {
             console.log(error)
         }
     }); 
+}
+
+function nextquestion() {
+    let currentNumQuestion = parseInt(current_question);
+    let nextone = currentNumQuestion+1;
+    window.location.assign("/quiz/" + nextone);
 }
 
 function display_header() {
