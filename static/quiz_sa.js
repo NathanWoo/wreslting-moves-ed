@@ -17,6 +17,7 @@ $(document).ready(function () {
         console.log($('#user-shortans').val())
         e.preventDefault();
         which_answer();
+        nextquestion();
     })
 })
  
@@ -62,6 +63,12 @@ function check_answer(info) {
         }
     }); 
 } 
+
+function nextquestion() {
+    let currentNumQuestion = parseInt(current_question);
+    let nextone = currentNumQuestion+1;
+    window.location.assign("/quiz/" + nextone);
+}
 
 function display_header() {
     $("#question-header").text("Question " + current_question + "/10")
