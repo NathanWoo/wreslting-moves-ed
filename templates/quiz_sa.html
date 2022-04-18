@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<script type="text/javascript" src="{{ url_for('static', filename = 'quiz_mc.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz_sa.js') }}"></script>
 
 <script>
     let current_score = {{ score | tojson }}
@@ -28,7 +28,7 @@
         <div id="short-ans">
             What move is this?
             <div>
-                <input type="text">
+                <input type="text" id="user-shortans">
             </div>
         </div>
         
