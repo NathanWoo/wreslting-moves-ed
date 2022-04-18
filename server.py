@@ -38,37 +38,42 @@ data = {
 }
 
 data_learn = {
-    "ps": {
+    1: {
         "id": 1,
+        "name": "Penetration step",
         "video": "penstep.gif",
         "review": ["body level lowers below opponent", 
                     "front knee drops to ground",
                     "back leg moves to front",
                     "often used to set up attacks (coming next!)"]
     },
-    "sla": {
+    2: {
         "id": 2,
+        "name": "Single leg attack",
         "video": "singleleg.gif",
         "review": ["usually starts with a penetration step (as described before)",
                     "ends with both hands around one leg",
                     "used to destabilize and take down opponent"]
     },
-    "dla": {
+    3: {
         "id": 3,
+        "name": "Double leg attack",
         "video": "doubleleg.gif",
         "review": ["usually starts from a penetration step",
                     "body level starts low, then raises as opponent is picked up",
                     "both opponents legs picked up"]
     },
-    "s": {
+    4: {
         "id": 4,
+        "name": "Sprawl",
         "video": "sprawl.gif",
         "review": ["move legs back to “fall” on opponent",
                     "land with arched back, chest on opponents back",
                     "defense usually in response to single and double leg attacks"]
     },
-    "gw": {
+    5: {
         "id": 5,
+        "name": "Gut Wrench",
         "video": "gutwrench.gif",
         "review": ["opponent is laying on the ground",
         "locks hands around ribs",
@@ -117,6 +122,12 @@ def check_answer():
 @app.route('/quiz')
 def quiz2():
     return render_template('quiz_welcome.html')
+
+@app.route('/learn/<id>')
+def learn(id):
+    id = int(id)
+    learn_data = data_learn[id]
+    return render_template('learn.html', learn_data=learn_data)
 
 
 if __name__ == '__main__':

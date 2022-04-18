@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col">
+    #{{learn_data['id']}}: {{learn_data['name']}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <img src={{'/static/' ~ learn_data['video']}} alt="">
+  </div>
+  <div class="col-md-3">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    Review:
+    <ul>
+      {% for review in learn_data['review'] %}
+      <li>{{review}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-3">
+    {% if learn_data['id'] > 1 %}
+    <a class="btn btn-primary"
+       href={{'/learn/' ~ (learn_data['id'] - 1)}}
+       role="button">Back</a>
+    {% endif %}
+  </div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3">
+    {% if learn_data['id'] < 5 %}
+    <a class="btn btn-primary"
+       href={{'/learn/' ~ (learn_data['id'] + 1) }}
+       role="button">Next</a>
+    {% elif learn_data['id'] == 5 %}
+    <a class="btn btn-primary"
+       href={{'/quiz/1'}}
+       role="button">Take the quiz</a>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
