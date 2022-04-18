@@ -7,7 +7,7 @@
 <script>
     let current_score = {{ score | tojson }}
     let dict = {{ data | tojson }}
-    let score = {{score | tojson }}
+    let score = {{ score | tojson }}
     let current_question = {{ question_num | tojson }}
 </script>
 
@@ -45,6 +45,12 @@
             <div><input type="radio" name="choice" value="s" id="s">
                 <label for="s">Sprawl</label>
             </div>
+            <div><input type="radio" name="choice" value="l" id="l">
+                <label for="l">Leg Lace</label>
+            </div>
+            <div><input type="radio" name="choice" value="sn" id="sn">
+                <label for="sn">Snapdown</label>
+            </div>
         </div>
     </div>
 
@@ -52,7 +58,7 @@
         <div id="popup"></div>
     </div>
 </div>
-    
+
 <div class="row">
     <div class="col-md-9">
     </div>

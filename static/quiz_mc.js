@@ -13,7 +13,7 @@ $(document).ready(function () {
     display_popup()
 
     // submit answer
-    $("#submit-button").click(function(e) {
+    $("#submit-button").click(function (e) {
         e.preventDefault();
         which_answer();
         nextquestion()
@@ -36,36 +36,42 @@ function which_answer() {
     if ($('#ps:checked').length > 0) {
         answerChosen = 5;
     }
+    if ($('#l:checked').length > 0) {
+        answerChosen = 6;
+    }
+    if ($('#sn:checked').length > 0) {
+        answerChosen = 7;
+    }
     console.log(answerChosen)
     console.log(currentVidID)
 
-    answer_info = {"answer_chosen": answerChosen, "correctID": currentVidID}
+    answer_info = { "answer_chosen": answerChosen, "correctID": currentVidID }
     check_answer(answer_info)
 }
 
 function check_answer(info) {
     $.ajax({
         type: "POST",
-        url: "/check_answer",                
-        dataType : "json",
+        url: "/check_answer",
+        dataType: "json",
         contentType: "application/json; charset=utf-8",
-        data : JSON.stringify(info),
-        success: function(result){
+        data: JSON.stringify(info),
+        success: function (result) {
             let newscore = result
             score = newscore
         },
-        error: function(request, status, error){
+        error: function (request, status, error) {
             console.log("Error");
             console.log(request)
             console.log(status)
             console.log(error)
         }
-    }); 
+    });
 }
 
 function nextquestion() {
     let currentNumQuestion = parseInt(current_question);
-    let nextone = currentNumQuestion+1;
+    let nextone = currentNumQuestion + 1;
     window.location.assign("/quiz/" + nextone);
 }
 
@@ -74,8 +80,10 @@ function display_header() {
 }
 
 function display_video() {
-    $("#video").html("<img src=/static/" + dict["video"] + ">")
+    //$("#video").html("<img src=/static/" + dict["video"] + ">")
+    $("#video").html("<video width='320' height='240' controls='muted autoplay'><source src='/static/" + dict["answer"] + "1.MP4' type='video/mp4'>Your browser does not support the video tag</video>")
     currentVidID = dict["id"]
+
 }
 
 function display_score() {
