@@ -37,6 +37,46 @@ data = {
     },
 }
 
+data_learn = {
+    "ps": {
+        "id": 1,
+        "video": "penstep.gif",
+        "review": ["body level lowers below opponent", 
+                    "front knee drops to ground",
+                    "back leg moves to front",
+                    "often used to set up attacks (coming next!)"]
+    },
+    "sla": {
+        "id": 2,
+        "video": "singleleg.gif",
+        "review": ["usually starts with a penetration step (as described before)",
+                    "ends with both hands around one leg",
+                    "used to destabilize and take down opponent"]
+    },
+    "dla": {
+        "id": 3,
+        "video": "doubleleg.gif",
+        "review": ["usually starts from a penetration step",
+                    "body level starts low, then raises as opponent is picked up",
+                    "both opponents legs picked up"]
+    },
+    "s": {
+        "id": 4,
+        "video": "sprawl.gif",
+        "review": ["move legs back to “fall” on opponent",
+                    "land with arched back, chest on opponents back",
+                    "defense usually in response to single and double leg attacks"]
+    },
+    "gw": {
+        "id": 5,
+        "video": "gutwrench.gif",
+        "review": ["opponent is laying on the ground",
+        "locks hands around ribs",
+        "rotate hips to flip opponent"
+        ]
+    }
+}
+
 score = 0
 question_num = 0
 
