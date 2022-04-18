@@ -78,6 +78,11 @@ def check_answer():
 def quiz2():
     return render_template('quiz_welcome.html')
 
+@app.route('/learn/<id>')
+def learn(id):
+    learn_data = data[id]
+    return render_template('learn.html', learn_data=learn_data)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
