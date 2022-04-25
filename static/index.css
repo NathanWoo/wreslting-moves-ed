@@ -17,8 +17,8 @@ body, html {
 .btn{
   background-color: hotpink;
   border-color: #ff0000;
+  margin-left: 300px;
 }
-
 
 .bg{
   /* The image used */
@@ -44,5 +44,14 @@ body, html {
 }
 
 .first-btn{
+  margin-top: 30px;
+}
+
+.move-title {
+  padding-top: 20px;
+}
+
+.material {
+  margin-left: 270px;
   margin-top: 30px;
 }
