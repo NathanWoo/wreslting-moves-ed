@@ -104,7 +104,8 @@ function display_next() {
 function display_submit() {
     $("#buttons").html("<button type='button' id='submit-button'>Submit</button>")
     if (parseInt(current_question) == 10) {
-        $("#buttons").remove();
+        $("#buttons").empty();
+        $("#buttons").html("<a href='/scorePage'><button>See Final Scores</button></a>")
     }
 }
 
