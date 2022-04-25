@@ -103,6 +103,9 @@ function display_next() {
 
 function display_submit() {
     $("#buttons").html("<button type='button' id='submit-button'>Submit</button>")
+    if (parseInt(current_question) == 10) {
+        $("#buttons").remove();
+    }
 }
 
 function display_correct(id) {
