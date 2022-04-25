@@ -76,6 +76,12 @@ function nextquestion() {
     window.location.assign("/quiz/" + nextone);
 }
 
+function nextquestion() {
+    let currentNumQuestion = parseInt(current_question);
+    let nextone = currentNumQuestion+1;
+    window.location.assign("/quiz/" + nextone);
+}
+
 function display_header() {
     $("#question-header").text("Question " + current_question + "/10")
 }
