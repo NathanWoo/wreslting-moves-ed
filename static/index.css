@@ -1,4 +1,48 @@
 #btn-knowledge {
   width: 100%;
   margin: 10px 0px;
+  padding: 20px 0px;
+}
+
+#btn-learn {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 20px 0px;
+}
+
+body, html {
+  height: 100%;
+}
+
+.btn{
+  background-color: hotpink;
+  border-color: #ff0000;
+}
+
+
+.bg{
+  /* The image used */
+  background-image: linear-gradient(rgba(9, 8, 8, 0.947), rgba(180, 169, 169, 0.795)), url("/static/pics/index-bg.png");
+
+  /* Full height */
+  height: 95vh;
+  margin-left: -27%;
+  margin-right: -27%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.index-title{
+  margin-top: 180px;
+  color: rgba(255, 13, 191);
+  font: italic 5em "Fira Sans", serif;
+  text-shadow: 2px 2px #ff0000;
+}
+
+.first-btn{
+  margin-top: 30px;
 }
