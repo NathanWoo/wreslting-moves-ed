@@ -160,6 +160,10 @@ def learn(id):
     learn_data = data_learn[id]
     return render_template('learn.html', learn_data=learn_data)
 
+@app.route('/scorePage')
+def getScore():
+    return render_template('scorePage.html', score=score)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
