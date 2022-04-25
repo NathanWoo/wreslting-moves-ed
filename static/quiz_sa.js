@@ -78,7 +78,7 @@ function nextquestion() {
 
 function nextquestion() {
     let currentNumQuestion = parseInt(current_question);
-    let nextone = currentNumQuestion+1;
+    let nextone = currentNumQuestion + 1;
     window.location.assign("/quiz/" + nextone);
 }
 
@@ -88,7 +88,7 @@ function display_header() {
 
 function display_video() {
     //$("#video").html("<img src=/static/" + dict["video"] + ">")
-    $("#video").html("<video width='320' height='240' controls='muted autoplay'><source src='/static/" + dict["answer"] + "2.MP4' type='video/mp4'>Your browser does not support the video tag</video>")
+    $("#video").html("<video width='320' height='240' controls=muted autoplay><source src='/static/" + dict["answer"] + "2.MP4.webm' type='video/mp4'>Your browser does not support the video tag</video>")
     currentVidID = dict["id"]
 }
 

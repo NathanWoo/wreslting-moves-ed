@@ -11,10 +11,10 @@ data = {
         "answer": "gw",
         "review": "<div id=review-header>Gut Wrench Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
     },
-    "dla": {
+    "dl": {
         "id": 2,
         "video": "dl",
-        "answer": "dla",
+        "answer": "dl",
         "review": "<div id=review-header>Double Leg Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
     },
     "sla": {
@@ -125,7 +125,7 @@ def index():
 def quiz(question_num=None):
     print("num:", question_num)
     if int(question_num) < 5:
-        return render_template('quiz_mc.html', score=score, question_num=question_num, data=data["ps"])
+        return render_template('quiz_mc.html', score=score, question_num=question_num, data=data["dl"])
     else:
         return render_template('quiz_sa.html', score=score, question_num=question_num, data=data["gw"])
     
