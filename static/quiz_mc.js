@@ -7,10 +7,6 @@ $(document).ready(function () {
     display_score()
     display_video()
     display_submit()
-    //display_next()
-    display_correct("#gw-feedback")
-    display_incorrect("#ps-feedback")
-    display_popup()
 
     // submit answer
     $("#submit-button").click(function (e) {
