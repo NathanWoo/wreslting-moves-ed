@@ -51,6 +51,11 @@ function which_answer() {
         answerChosen = 7;
         chosen_answer_html_id = '#sn';
     }
+
+    if (!$.isNumeric(answerChosen)){
+        alert('Please select an answer')
+        return
+    }
     
     answer_feedback(chosen_answer_html_id, answerChosen, currentVidID);
     console.log(answerChosen)
