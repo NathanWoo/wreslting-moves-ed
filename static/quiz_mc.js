@@ -7,11 +7,16 @@ $(document).ready(function () {
     display_score()
     display_video()
     display_submit()
+    display_next()
 
     // submit answer
     $("#submit-button").click(function (e) {
         e.preventDefault();
         which_answer();
+    })
+    
+    $("#next-button").click(function (e) {
+        e.preventDefault();
         nextquestion()
     })
 })
@@ -88,11 +93,11 @@ function display_score() {
 }
 
 function display_next() {
-    $("#buttons").html("<button type='button' id='next-button'>Continue</button>")
+    $("#next_buttons").html("<button type='button' id='next-button'>Next</button>")
 }
 
 function display_submit() {
-    $("#buttons").html("<button type='button' id='submit-button'>Submit</button>")
+    $("#buttons").html("<a href='/check_answer'><button type='button' id='submit-button'>Submit</button>")
 }
 
 function display_correct(id) {
