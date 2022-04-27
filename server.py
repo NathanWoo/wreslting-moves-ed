@@ -9,43 +9,43 @@ data = {
         "id": 1,
         "video": "gw",
         "answer": "gw",
-        "review": "<div id=review-header>Gut Wrench Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
+        "review": "<div id=review-header>Gut Wrench Review</div><div id=review-content><ul><li>opponent is laying on the ground</li><li>locks hands around ribs</li><li>rotate hips to flip opponent</li></ul>"
     },
     "dl": {
         "id": 2,
         "video": "dl",
         "answer": "dl",
-        "review": "<div id=review-header>Double Leg Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
+        "review": "<div id=review-header>Double Leg Review</div><div id=review-content><ul><li>usually starts from a penetration step</li><li>body level starts low, then raises as opponent is picked up</li><li>both opponents legs picked up</li></ul>"
     },
     "sla": {
         "id": 3,
         "video": "sl",
         "answer": "sl",
-        "review": "<div id=review-header>Single Leg Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
+        "review": "<div id=review-header>Single Leg Review</div><div id=review-content><ul><li>usually starts with a penetration step</li><li>ends with both hands around one leg</li><li>used to destabilize and take down opponent</li></ul>"
     },
     "s": {
         "id": 4,
         "video": "s",
         "answer": "s",
-        "review": "<div id=review-header>Sprawl Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
+        "review": "<div id=review-header>Sprawl Review</div><div id=review-content><ul><li>move legs back to “fall” on opponent</li><li>land with arched back, chest on opponents back</li><li>defense usually in response to single and double leg attacks</li></ul>"
     },
     "ps": {
         "id": 5,
         "video": "ps",
         "answer": "ps",
-        "review": "<div id=review-header>Penetration Step Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
+        "review": "<div id=review-header>Penetration Step Review</div><div id=review-content><ul><li>body level lowers below opponent</li><li>front knee drops to ground</li><li>back leg moves to front</li><li>often used to set up attacks</li></ul>"
     },
     "l": {
         "id": 6,
         "video": "l",
         "answer": "l",
-        "review": "<div id=review-header>Leg Lace Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
+        "review": "<div id=review-header>Leg Lace Review</div><div id=review-content><ul><li>opponent is laying on the ground</li><li>cross opponents legs across each other near ankles</li><li>sit underneath and rotate to roll opponent</li></ul>"
     },
     "sn": {
         "id": 7,
         "video": "sn",
         "answer": "sn",
-        "review": "<div id=review-header>Snapdown Review</div><div id=review-content><ul><li>review element 1</li><li>review element 2</li><li>review element 3</li></ul>"
+        "review": "<div id=review-header>Snapdown Review</div><div id=review-content><ul><li>starting position with head around back of neck</li><li>pull opponents head and body down to the mat while moving back</li></ul>"
     },
 }
 
