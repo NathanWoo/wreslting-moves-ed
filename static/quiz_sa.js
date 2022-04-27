@@ -7,7 +7,7 @@ $(document).ready(function () {
     display_score()
     display_video()
     display_submit()
-    //display_next()
+    display_next()
     display_correct("#gw-feedback")
     display_incorrect("#ps-feedback")
     display_popup()
@@ -17,7 +17,11 @@ $(document).ready(function () {
         console.log($('#user-shortans').val())
         e.preventDefault();
         which_answer();
-        nextquestion();
+    })
+
+    $("#next-button").click(function (e) {
+        e.preventDefault();
+        nextquestion()
     })
 })
 
@@ -98,15 +102,15 @@ function display_score() {
 }
 
 function display_next() {
-    $("#buttons").html("<button type='button' id='next-button'>Continue</button>")
+    $("#next_buttons").html("<button type='button' id='next-button'>Next</button>")
+    if (parseInt(current_question) == 10) {
+        $("#buttons").empty();
+        $("#next_buttons").html("<a href='/scorePage'><button>See Final Scores</button></a>")
+    }
 }
 
 function display_submit() {
     $("#buttons").html("<button type='button' id='submit-button'>Submit</button>")
-    if (parseInt(current_question) == 10) {
-        $("#buttons").empty();
-        $("#buttons").html("<a href='/scorePage'><button>See Final Scores</button></a>")
-    }
 }
 
 function display_correct(id) {
