@@ -26,6 +26,10 @@ $(document).ready(function () {
 })
 
 function which_answer() {
+    if ($.trim($('#user-shortans').val()) == ''){
+        alert('Please provide input')
+    }
+
     if ($('#user-shortans').val().toLowerCase() == "gut wrench") {
         answerChosen = 1;
     }
@@ -47,8 +51,10 @@ function which_answer() {
     if ($('#user-shortans').val().toLowerCase() == "snapdown") {
         answerChosen = 7;
     }
-    console.log(answerChosen)
-    console.log(currentVidID)
+
+    if (!$.isNumeric(answerChosen)){
+        answerChosen = -1
+    }
 
     answer_info = { "answer_chosen": answerChosen, "correctID": currentVidID }
     check_answer(answer_info)
