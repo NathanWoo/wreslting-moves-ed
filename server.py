@@ -115,6 +115,7 @@ data_learn = {
 score = 0
 question_num = 0
 
+quiz_data = random.choices(list(data.values()), k=11)
 
 @app.route('/')
 def index():
@@ -123,11 +124,12 @@ def index():
 
 @app.route('/quiz/<question_num>')
 def quiz(question_num=None):
+    question_num = int(question_num)
     print("num:", question_num)
     if int(question_num) < 5:
-        return render_template('quiz_mc.html', score=score, question_num=question_num, data=data["dl"])
+        return render_template('quiz_mc.html', score=score, question_num=question_num, data=quiz_data[question_num])
     else:
-        return render_template('quiz_sa.html', score=score, question_num=question_num, data=data["gw"])
+        return render_template('quiz_sa.html', score=score, question_num=question_num, data=quiz_data[question_num])
     
 @app.route('/check_answer', methods=['GET', 'POST'])
 def check_answer():
