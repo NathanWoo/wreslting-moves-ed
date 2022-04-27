@@ -65,9 +65,11 @@ function which_answer() {
     check_answer(answer_info)
 }
 
-function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentVidID){
-    if (chosen_answer_id != currentVidID){
+function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentID){
+    if (chosen_answer_id != currentID){
         $(chosen_answer_html_id + '-feedback').append(" ❌ ")
+        $('#' + dict["video"] + '-feedback').append(" ✅ ")
+        display_popup()
     } else {
         $(chosen_answer_html_id + '-feedback').append(" ✅ ")
     }
