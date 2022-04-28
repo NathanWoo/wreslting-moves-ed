@@ -26,38 +26,56 @@ $(document).ready(function () {
 })
 
 function which_answer() {
+    let chosen_answer_html_id = '';
     if ($.trim($('#user-shortans').val()) == ''){
         alert('Please provide input')
     }
 
     if ($('#user-shortans').val().toLowerCase() == "gut wrench") {
         answerChosen = 1;
+        chosen_answer_html_id = '#gw';
     }
     if ($('#user-shortans').val().toLowerCase() == "double leg attack") {
         answerChosen = 2;
+        chosen_answer_html_id = '#dl';
     }
     if ($('#user-shortans').val().toLowerCase() == "single leg attack") {
         answerChosen = 3;
+        chosen_answer_html_id = '#sl';
     }
     if ($('#user-shortans').val().toLowerCase() == "sprawl") {
         answerChosen = 4;
+        chosen_answer_html_id = '#s';
     }
     if ($('#user-shortans').val().toLowerCase() == "penetration step") {
         answerChosen = 5;
+        chosen_answer_html_id = '#ps';
     }
     if ($('#user-shortans').val().toLowerCase() == "leg lace" || $('#user-shortans').val().toLowerCase() == "lace") {
         answerChosen = 6;
+        chosen_answer_html_id = '#l';
     }
     if ($('#user-shortans').val().toLowerCase() == "snapdown") {
         answerChosen = 7;
+        chosen_answer_html_id = '#sn';
     }
 
     if (!$.isNumeric(answerChosen)){
         answerChosen = -1
     }
 
+    answer_feedback(chosen_answer_html_id, answerChosen, currentVidID);
     answer_info = { "answer_chosen": answerChosen, "correctID": currentVidID }
     check_answer(answer_info)
+}
+
+function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentID){
+    if (chosen_answer_id != currentID){
+        $("#symbol").append(" ❌ This is a <b>" + dict["name"] + "</b>")
+        display_popup()
+    } else {
+        $("#symbol").append(" ✅ Correct!")
+    }
 }
 
 function check_answer(info) {
@@ -129,4 +147,5 @@ function display_incorrect(id) {
 
 function display_popup() {
     $("#popup").html(dict["review"])
+    $("#returntolearn").html("<a href='/learn/"+dict["id_learn"]+"'><button type='button' id='backtolearn-button'>Review the move: "+dict["name"]+"</button>")
 }
