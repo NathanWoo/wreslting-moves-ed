@@ -29,11 +29,11 @@ function which_answer() {
     }
     if ($('#dla:checked').length > 0) {
         answerChosen = 2;
-        chosen_answer_html_id = '#dla';
+        chosen_answer_html_id = '#dl';
     }
     if ($('#sla:checked').length > 0) {
         answerChosen = 3;
-        chosen_answer_html_id = '#sla';
+        chosen_answer_html_id = '#sl';
     }
     if ($('#s:checked').length > 0) {
         answerChosen = 4;
@@ -136,4 +136,5 @@ function display_incorrect(id) {
 
 function display_popup() {
     $("#popup").html(dict["review"])
+    $("#returntolearn").html("<a href='/learn/"+dict["id_learn"]+"'><button type='button' id='backtolearn-button'>Review the move: "+dict["name"]+"</button>")
 }
