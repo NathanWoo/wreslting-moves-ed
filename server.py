@@ -124,7 +124,10 @@ def index():
 @app.route('/quiz/<question_num>')
 def quiz(question_num=None):
     print("num:", question_num)
-    if int(question_num) < 5:
+    if question_num == 1:
+        score = 0
+        return render_template('quiz_mc.html', score=score, question_num=question_num, data=data["dl"])
+    if int(question_num) < 5 and question_num > 1:
         return render_template('quiz_mc.html', score=score, question_num=question_num, data=data["dl"])
     else:
         return render_template('quiz_sa.html', score=score, question_num=question_num, data=data["gw"])
