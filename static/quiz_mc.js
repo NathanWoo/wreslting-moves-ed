@@ -86,6 +86,7 @@ function check_answer(info) {
         success: function (result) {
             let newscore = result
             score = newscore
+            console.log(score)
         },
         error: function (request, status, error) {
             console.log("Error");

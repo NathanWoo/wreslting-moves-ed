@@ -140,7 +140,9 @@ def index():
 def quiz(question_num=None):
     question_num = int(question_num)
     print("num:", question_num)
-    if int(question_num) < 5:
+    if question_num == 1:
+        return render_template('quiz_mc.html', score=score, question_num=question_num, data=quiz_data[question_num])
+    elif int(question_num) < 5 and question_num > 1:
         return render_template('quiz_mc.html', score=score, question_num=question_num, data=quiz_data[question_num])
     else:
         return render_template('quiz_sa.html', score=score, question_num=question_num, data=quiz_data[question_num])
