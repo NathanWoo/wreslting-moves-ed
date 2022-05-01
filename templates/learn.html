@@ -2,6 +2,12 @@
 
 {% block content %}
 
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
+
+<script>
+  let learn_data = {{ learn_data | tojson }}
+</script>
+
 <div class="row">
   <div class="col-md-5 move-title">
     #{{learn_data['id']}}: {{learn_data['name']}}
@@ -10,9 +16,14 @@
 
 <div class="row">
   <div class="col-md-3"></div>
-  <div class="col-md-7 justify-content-center">
+  <div class="col-md-7 justify-content-center" id="learn-video">
+    <!-- <video width='320' height='240' controls='muted autoplay'>
+      <source src='/static/' + {{learn_data['abr']}} + '_learn.webm' type='video/mp4'>
+      Your browser does not support the video tag
+    </video>"
+
     <img src={{'/static/' ~ learn_data['video']}} alt="">
-    <iframe src={{learn_data['video']}} alt="" allow="autoplay" width=640 height=360></iframe>
+    <iframe src={{learn_data['video']}} alt="" allow="autoplay" width=640 height=360></iframe> -->
   </div>
   <div class="col-md-2">
   </div>

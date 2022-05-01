@@ -13,14 +13,14 @@ $(document).ready(function () {
     // submit answer
     $("#submit-button").click(function (e) {
         e.preventDefault();
-        if (!submitted){
+        if (!submitted) {
             which_answer();
         } else {
             alert("You've already submitted answer for this question")
             return
         }
     })
-    
+
     $("#next-button").click(function (e) {
         e.preventDefault();
         if (!submitted) {
@@ -28,7 +28,7 @@ $(document).ready(function () {
         } else {
             nextquestion()
         }
-        
+
     })
 })
 
@@ -63,22 +63,22 @@ function which_answer() {
         chosen_answer_html_id = '#sn';
     }
 
-    if (!$.isNumeric(answerChosen)){
+    if (!$.isNumeric(answerChosen)) {
         alert('Please select an answer')
         return
     }
-    
+
     answer_feedback(chosen_answer_html_id, answerChosen, currentVidID);
     console.log(answerChosen)
     console.log(currentVidID)
 
-    answer_info = {"answer_chosen": answerChosen, "correctID": currentVidID }
+    answer_info = { "answer_chosen": answerChosen, "correctID": currentVidID }
     check_answer(answer_info)
     submitted = true;
 }
 
-function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentID){
-    if (chosen_answer_id != currentID){
+function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentID) {
+    if (chosen_answer_id != currentID) {
         $(chosen_answer_html_id + '-feedback').append(" ❌ ")
         $('#' + dict["video"] + '-feedback').append(" ✅ ")
         display_popup()
@@ -120,10 +120,8 @@ function display_header() {
 }
 
 function display_video() {
-    //$("#video").html("<img src=/static/" + dict["video"] + ">")
     $("#video").html("<video width='320' height='240' controls='muted autoplay'><source src='/static/" + dict["answer"] + "1.MP4.webm' type='video/mp4'>Your browser does not support the video tag</video>")
     currentVidID = dict["id"]
-
 }
 
 function display_score() {
@@ -149,5 +147,5 @@ function display_incorrect(id) {
 
 function display_popup() {
     $("#popup").html(dict["review"])
-    $("#returntolearn").html("<a href='/learn/"+dict["id_learn"]+"'><button type='button' id='backtolearn-button'>Review the move: "+dict["name"]+"</button>")
+    $("#returntolearn").html("<a href='/learn/" + dict["id_learn"] + "'><button type='button' id='backtolearn-button'>Review the move: " + dict["name"] + "</button>")
 }
