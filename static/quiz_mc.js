@@ -23,7 +23,12 @@ $(document).ready(function () {
     
     $("#next-button").click(function (e) {
         e.preventDefault();
-        nextquestion()
+        if (!submitted) {
+            alert("Please choose an answer")
+        } else {
+            nextquestion()
+        }
+        
     })
 })
 
