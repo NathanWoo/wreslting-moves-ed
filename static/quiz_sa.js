@@ -130,6 +130,7 @@ function display_next() {
     if (parseInt(current_question) == 10) {
         $("#buttons").empty();
         $("#next_buttons").html("<a href='/scorePage'><button>See Final Scores</button></a>")
+        display_submit();
     }
 }
 
