@@ -29,6 +29,7 @@ function which_answer() {
     let chosen_answer_html_id = '';
     if ($.trim($('#user-shortans').val()) == ''){
         alert('Please provide input')
+        return
     }
 
     if ($('#user-shortans').val().toLowerCase() == "gut wrench") {
