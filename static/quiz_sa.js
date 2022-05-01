@@ -28,7 +28,7 @@ $(document).ready(function () {
     $("#next-button").click(function (e) {
         e.preventDefault();
         if (!submitted) {
-            alert("Please choose an answer")
+            alert("Please submit an answer")
         } else {
             nextquestion()
         }
