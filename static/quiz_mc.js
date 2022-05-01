@@ -1,6 +1,7 @@
 let answerChosen;
 let results = false;
 let currentVidID;
+let submitted = false;
 
 $(document).ready(function () {
     display_header()
@@ -12,7 +13,12 @@ $(document).ready(function () {
     // submit answer
     $("#submit-button").click(function (e) {
         e.preventDefault();
-        which_answer();
+        if (!submitted){
+            which_answer();
+        } else {
+            alert("You've already submitted answer for this question")
+            return
+        }
     })
     
     $("#next-button").click(function (e) {
@@ -63,6 +69,7 @@ function which_answer() {
 
     answer_info = {"answer_chosen": answerChosen, "correctID": currentVidID }
     check_answer(answer_info)
+    submitted = true;
 }
 
 function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentID){
