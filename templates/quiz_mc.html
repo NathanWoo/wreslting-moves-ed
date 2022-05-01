@@ -11,19 +11,18 @@
     let current_question = {{ question_num | tojson }}
 </script>
 
-
+<div class="container-fluid q-main">
 <div class="row">
-    <div class="col-md-3">
-        <div id="score"></div>
-    </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
         <div id="question-header"></div>
     </div>
-    <div class="col-md-3"></div>
+    <div class="col-md-6"></div>
+    <div class="col-md-2" id="score">
+    </div>
 </div>
 
 <div class="row">
-    <div class="col-md-3"></div>
+    <div class="col-md-4"></div>
     <div class="col-md-6">
         <div id="video"></div>
         <div id="options">
@@ -59,7 +58,7 @@
         </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
         <div id="popup"></div>
         <div id="returntolearn"></div>
     </div>
@@ -72,6 +71,7 @@
     </div>
     <div class="col-md-3" id="next_buttons">
     </div>
+</div>
 </div>
 </div>
 

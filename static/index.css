@@ -42,5 +42,35 @@ body, html {
 
 .material {
   margin-left: 270px;
+  margin-top: 20px;
+}
+
+.bg-pink{
+  background-color: #ff61b0;
+}
+
+.q-main {
   margin-top: 30px;
+}
+
+#question-header{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.move-title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.justify-content-center{
+  margin-left: -40px;
+}
+
+.back-button{
+  margin-left: -70px;
+}
+
+.l-button{
+  margin-top: 18px;
 }
