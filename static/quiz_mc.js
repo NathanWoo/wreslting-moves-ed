@@ -7,29 +7,9 @@ $(document).ready(function () {
     display_header()
     display_score()
     display_video()
-    display_submit()
     display_next()
+    display_submit()
 
-    // submit answer
-    $("#submit-button").click(function (e) {
-        e.preventDefault();
-        if (!submitted) {
-            which_answer();
-        } else {
-            alert("You've already submitted answer for this question")
-            return
-        }
-    })
-
-    $("#next-button").click(function (e) {
-        e.preventDefault();
-        if (!submitted) {
-            alert("Please submit an answer")
-        } else {
-            nextquestion()
-        }
-
-    })
 })
 
 function which_answer() {
@@ -131,10 +111,37 @@ function display_score() {
 
 function display_next() {
     $("#next_buttons").html("<button type='button' class='btn btn-primary' id='next-button'>Next</button>")
+    add_next_functionality()
+}
+
+function add_next_functionality() {
+    $("#next-button").click(function (e) {
+        e.preventDefault();
+        if (!submitted) {
+            alert("Please submit an answer")
+        } else {
+            nextquestion()
+        }
+
+    })
 }
 
 function display_submit() {
-    $("#buttons").html("<a href='/check_answer'><button type='button' class='btn btn-primary' id='submit-button'>Submit</button>")
+    $("#next_buttons").html("<a href='/check_answer'><button type='button' class='btn btn-primary' id='submit-button'>Submit</button>")
+    add_submit_functionality()
+}
+
+function add_submit_functionality(){
+    $("#submit-button").click(function (e) {
+        e.preventDefault();
+        if (!submitted) {
+            which_answer();
+            display_next()
+        } else {
+            alert("You've already submitted answer for this question")
+            return
+        }
+    })
 }
 
 function display_correct(id) {

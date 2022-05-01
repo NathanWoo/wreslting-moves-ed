@@ -8,7 +8,6 @@ $(document).ready(function () {
     display_score()
     display_video()
     display_submit()
-    display_next()
     display_correct("#gw-feedback")
     display_incorrect("#ps-feedback")
 
@@ -18,18 +17,10 @@ $(document).ready(function () {
         e.preventDefault();
         if (!submitted){
             which_answer();
+            display_next()
         } else {
             alert("You've already submitted answer for this question")
             return
-        }
-    })
-
-    $("#next-button").click(function (e) {
-        e.preventDefault();
-        if (!submitted) {
-            alert("Please submit an answer")
-        } else {
-            nextquestion()
         }
     })
 })
@@ -45,11 +36,11 @@ function which_answer() {
         answerChosen = 1;
         chosen_answer_html_id = '#gw';
     }
-    if ($('#user-shortans').val().toLowerCase() == "double leg attack") {
+    if ($('#user-shortans').val().toLowerCase() == "double leg attack" || $('#user-shortans').val().toLowerCase() == "double leg") {
         answerChosen = 2;
         chosen_answer_html_id = '#dl';
     }
-    if ($('#user-shortans').val().toLowerCase() == "single leg attack") {
+    if ($('#user-shortans').val().toLowerCase() == "single leg attack" || $('#user-shortans').val().toLowerCase() == "single leg") {
         answerChosen = 3;
         chosen_answer_html_id = '#sl';
     }
@@ -65,7 +56,7 @@ function which_answer() {
         answerChosen = 6;
         chosen_answer_html_id = '#l';
     }
-    if ($('#user-shortans').val().toLowerCase() == "snapdown") {
+    if ($('#user-shortans').val().toLowerCase() == "snapdown" || $('#user-shortans').val().toLowerCase() == "snap down") {
         answerChosen = 7;
         chosen_answer_html_id = '#sn';
     }
@@ -143,6 +134,18 @@ function display_next() {
         $("#next_buttons").html("<a href='/scorePage'><button>See Final Scores</button></a>")
         display_submit();
     }
+    add_next_functionality()
+}
+
+function add_next_functionality() {
+    $("#next-button").click(function (e) {
+        e.preventDefault();
+        if (!submitted) {
+            alert("Please submit an answer")
+        } else {
+            nextquestion()
+        }
+    })
 }
 
 function display_submit() {
