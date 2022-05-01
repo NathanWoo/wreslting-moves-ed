@@ -24,7 +24,7 @@ $(document).ready(function () {
     $("#next-button").click(function (e) {
         e.preventDefault();
         if (!submitted) {
-            alert("Please choose an answer")
+            alert("Please submit an answer")
         } else {
             nextquestion()
         }
@@ -130,11 +130,11 @@ function display_score() {
 }
 
 function display_next() {
-    $("#next_buttons").html("<button type='button' id='next-button'>Next</button>")
+    $("#next_buttons").html("<button type='button' class='btn btn-primary' id='next-button'>Next</button>")
 }
 
 function display_submit() {
-    $("#buttons").html("<a href='/check_answer'><button type='button' id='submit-button'>Submit</button>")
+    $("#buttons").html("<a href='/check_answer'><button type='button' class='btn btn-primary' id='submit-button'>Submit</button>")
 }
 
 function display_correct(id) {
@@ -147,5 +147,9 @@ function display_incorrect(id) {
 
 function display_popup() {
     $("#popup").html(dict["review"])
+<<<<<<< HEAD
     $("#returntolearn").html("<a href='/learn/" + dict["id_learn"] + "'><button type='button' id='backtolearn-button'>Review the move: " + dict["name"] + "</button>")
+=======
+    $("#returntolearn").html("<a href='/learn/"+dict["id_learn"]+"'><button type='button' class='btn btn-primary' id='backtolearn-button'>Review the move: "+dict["name"]+"</button>")
+>>>>>>> e21b673c9a72ba3e07b5a5dc1e7a02897246ab69
 }

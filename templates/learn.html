@@ -44,15 +44,15 @@
 <div class="row l-button">
   <div class="col-md-4 back-button">
     {% if learn_data['id'] > 1 %}
-    <a class="btn btn-primary" href={{'/learn/' ~ (learn_data['id'] - 1)}} role="button">Back</a>
+    <a class="btn btn-primary btn-p" href={{'/learn/' ~ (learn_data['id'] - 1)}} role="button">Back</a>
     {% endif %}
   </div>
   <div class="col-md-2"></div>
   <div class="col-md-5 text-center">
-    {% if learn_data['id'] < 7 %} <a class="btn btn-primary" href={{'/learn/' ~ (learn_data['id'] + 1) }} role="button">
+    {% if learn_data['id'] < 7 %} <a class="btn btn-primary btn-p" href={{'/learn/' ~ (learn_data['id'] + 1) }} role="button">
       Next</a>
       {% elif learn_data['id'] == 7 %}
-      <a class="btn btn-primary" href={{'/quiz/1'}} role="button">Take the quiz</a>
+      <a class="btn btn-primary btn-p" href={{'/quiz/1'}} role="button">Take the quiz</a>
       {% endif %}
   </div>
 </div>
