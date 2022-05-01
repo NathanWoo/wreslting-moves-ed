@@ -11,7 +11,6 @@ $(document).ready(function () {
     display_next()
     display_correct("#gw-feedback")
     display_incorrect("#ps-feedback")
-    display_popup()
 
     // submit answer
     $("#submit-button").click(function (e) {
@@ -138,7 +137,7 @@ function display_score() {
 }
 
 function display_next() {
-    $("#next_buttons").html("<button type='button' id='next-button'>Next</button>")
+    $("#next_buttons").html("<button type='button' class='btn btn-primary' id='next-button'>Next</button>")
     if (parseInt(current_question) == 10) {
         $("#buttons").empty();
         $("#next_buttons").html("<a href='/scorePage'><button>See Final Scores</button></a>")
@@ -147,7 +146,7 @@ function display_next() {
 }
 
 function display_submit() {
-    $("#buttons").html("<button type='button' id='submit-button'>Submit</button>")
+    $("#buttons").html("<button type='button' class='btn btn-primary' id='submit-button'>Submit</button>")
 }
 
 function display_correct(id) {
@@ -160,5 +159,5 @@ function display_incorrect(id) {
 
 function display_popup() {
     $("#popup").html(dict["review"])
-    $("#returntolearn").html("<a href='/learn/"+dict["id_learn"]+"'><button type='button' id='backtolearn-button'>Review the move: "+dict["name"]+"</button>")
+    $("#returntolearn").html("<a href='/learn/"+dict["id_learn"]+"'><button type='button' class='btn btn-primary' id='backtolearn-button'>Review the move: "+dict["name"]+"</button>")
 }
