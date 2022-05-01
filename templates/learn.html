@@ -49,7 +49,8 @@
   </div>
   <div class="col-md-2"></div>
   <div class="col-md-5 text-center">
-    {% if learn_data['id'] < 7 %} <a class="btn btn-primary btn-p" href={{'/learn/' ~ (learn_data['id'] + 1) }} role="button">
+    {% if learn_data['id'] < 7 %} <a class="btn btn-primary btn-p" href={{'/learn/' ~ (learn_data['id'] + 1) }}
+      role="button">
       Next</a>
       {% elif learn_data['id'] == 7 %}
       <a class="btn btn-primary btn-p" href={{'/quiz/1'}} role="button">Take the quiz</a>
