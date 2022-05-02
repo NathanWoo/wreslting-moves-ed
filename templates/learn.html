@@ -9,51 +9,54 @@
 </script>
 
 <div class="row">
-  <div class="col-md-5 move-title">
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-6 move-title center">
     #{{learn_data['id']}}: {{learn_data['name']}}
+  </div>
+  <div class="col-md-3">
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-3"></div>
-  <div class="col-md-7 justify-content-center" id="learn-video">
-    <!-- <video width='320' height='240' controls='muted autoplay'>
-      <source src='/static/' + {{learn_data['abr']}} + '_learn.webm' type='video/mp4'>
-      Your browser does not support the video tag
-    </video>"
-
-    <img src={{'/static/' ~ learn_data['video']}} alt="">
-    <iframe src={{learn_data['video']}} alt="" allow="autoplay" width=640 height=360></iframe> -->
+  <div class="col-md-6 justify-content-center" id="learn-video">
   </div>
-  <div class="col-md-2">
+  <div class="col-md-3">
   </div>
 </div>
 
 <div class="row material">
-  <div class="col-md-9">
-    Review:
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-6">
+    <div id="review">
+      Review:
+    </div>
     <ul>
       {% for review in learn_data['review'] %}
       <li>{{review}}</li>
       {% endfor %}
     </ul>
   </div>
+  <div class="col-md-3">
+  </div>
 </div>
 
 
 <div class="row l-button">
-  <div class="col-md-4 back-button">
+  <div class="col-md-3 back-button">
     {% if learn_data['id'] > 1 %}
-    <a class="btn btn-primary btn-p" href={{'/learn/' ~ (learn_data['id'] - 1)}} role="button">Back</a>
+    <a class="btn btn-primary btn-p" href={{'/learn/' ~ (learn_data['id'] - 1)}} role="button">back</a>
     {% endif %}
   </div>
-  <div class="col-md-2"></div>
-  <div class="col-md-5 text-center">
+  <div class="col-md-6"></div>
+  <div class="col-md-3 next-learn-button">
     {% if learn_data['id'] < 7 %} <a class="btn btn-primary btn-p" href={{'/learn/' ~ (learn_data['id'] + 1) }}
       role="button">
-      Next</a>
+      next</a>
       {% elif learn_data['id'] == 7 %}
-      <a class="btn btn-primary btn-p" href={{'/quiz/1'}} role="button">Take the quiz</a>
+      <a class="btn btn-primary btn-p" href={{'/quiz/1'}} role="button">Take the quiz!</a>
       {% endif %}
   </div>
 </div>

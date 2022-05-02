@@ -28,10 +28,6 @@ body, html {
   border-color: #dc548a;
 }
 
-.btn-p{
-  margin-left: 300px;
-}
-
 .circular{
   border-radius: 50%;
   width: 100%;
@@ -51,12 +47,13 @@ body, html {
 }
 
 .move-title {
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 15px;
 }
 
 .material {
-  margin-left: 270px;
-  margin-top: 20px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 .bg-pink{
@@ -65,6 +62,18 @@ body, html {
 
 .q-main {
   margin-top: 30px;
+}
+
+#review {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.video-fluid {
+  max-width: 100%;
+  width:auto;
+  height: auto;
+  border: solid 1px #38081b;
 }
 
 #question-header{
@@ -78,12 +87,19 @@ body, html {
   font-weight: bold;
 }
 
-.justify-content-center{
-  margin-left: -40px;
+.center{
+  text-align: center;
 }
 
+
 .back-button{
-  margin-left: -70px;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.next-learn-button{
+  text-align: left;
+  padding-left: 50px;
 }
 
 .l-button{
