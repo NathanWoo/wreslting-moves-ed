@@ -11,7 +11,7 @@ data = {
         "name": "Gut Wrench",
         "video": "gw",
         "answer": "gw",
-        "review": "<div id=review-header>Gut Wrench Review</div><div id=review-content><ul><li>opponent is laying on the ground</li><li>locks hands around ribs</li><li>rotate hips to flip opponent</li></ul>"
+        "review": "<div id=popup-content><div id=review-header class='subhead'>Gut Wrench Review</div><div id=review-content><ul><li>opponent is laying on the ground</li><li>locks hands around ribs</li><li>rotate hips to flip opponent</li></ul><div id='returntolearn'></div></div>"
     },
     "dl": {
         "id": 2,
@@ -19,7 +19,7 @@ data = {
         "name": "Double Leg Attack",
         "video": "dl",
         "answer": "dl",
-        "review": "<div id=review-header>Double Leg Review</div><div id=review-content><ul><li>usually starts from a penetration step</li><li>body level starts low, then raises as opponent is picked up</li><li>both opponents legs picked up</li></ul>"
+        "review": "<div id=popup-content><div id=review-header class='subhead'>Double Leg Review</div><div id=review-content><ul><li>usually starts from a penetration step</li><li>body level starts low, then raises as opponent is picked up</li><li>both opponents legs picked up</li></ul><div id='returntolearn'></div></div>"
     },
     "sla": {
         "id": 3,
@@ -27,7 +27,7 @@ data = {
         "name": "Single Leg Attack",
         "video": "sl",
         "answer": "sl",
-        "review": "<div id=review-header>Single Leg Review</div><div id=review-content><ul><li>usually starts with a penetration step</li><li>ends with both hands around one leg</li><li>used to destabilize and take down opponent</li></ul>"
+        "review": "<div id=popup-content><div id=review-header class='subhead'>Single Leg Review</div><div id=review-content><ul><li>usually starts with a penetration step</li><li>ends with both hands around one leg</li><li>used to destabilize and take down opponent</li></ul><div id='returntolearn'></div></div>"
     },
     "s": {
         "id": 4,
@@ -35,7 +35,7 @@ data = {
         "name": "Sprawl",
         "video": "s",
         "answer": "s",
-        "review": "<div id=review-header>Sprawl Review</div><div id=review-content><ul><li>move legs back to “fall” on opponent</li><li>land with arched back, chest on opponents back</li><li>defense usually in response to single and double leg attacks</li></ul>"
+        "review": "<div id=popup-content><div id=review-header class='subhead'>Sprawl Review</div><div id=review-content><ul><li>move legs back to “fall” on opponent</li><li>land with arched back, chest on opponents back</li><li>defense usually in response to single and double leg attacks</li></ul><div id='returntolearn'></div></div>"
     },
     "ps": {
         "id": 5,
@@ -43,7 +43,7 @@ data = {
         "name": "Penetration Step",
         "video": "ps",
         "answer": "ps",
-        "review": "<div id=review-header>Penetration Step Review</div><div id=review-content><ul><li>body level lowers below opponent</li><li>front knee drops to ground</li><li>back leg moves to front</li><li>often used to set up attacks</li></ul>"
+        "review": "<div id=popup-content><div id=review-header class='subhead'>Penetration Step Review</div><div id=review-content><ul><li>body level lowers below opponent</li><li>front knee drops to ground</li><li>back leg moves to front</li><li>often used to set up attacks</li></ul><div id='returntolearn'></div></div>"
     },
     "l": {
         "id": 6,
@@ -51,7 +51,7 @@ data = {
         "name": "Leg Lace",
         "video": "l",
         "answer": "l",
-        "review": "<div id=review-header>Leg Lace Review</div><div id=review-content><ul><li>opponent is laying on the ground</li><li>cross opponents legs across each other near ankles</li><li>sit underneath and rotate to roll opponent</li></ul>"
+        "review": "<div id=popup-content><div id=review-header class='subhead'>Leg Lace Review</div><div id=review-content><ul><li>opponent is laying on the ground</li><li>cross opponents legs across each other near ankles</li><li>sit underneath and rotate to roll opponent</li></ul><div id='returntolearn'></div></div>"
     },
     "sn": {
         "id": 7,
@@ -59,7 +59,7 @@ data = {
         "name": "Snapdown",
         "video": "sn",
         "answer": "sn",
-        "review": "<div id=review-header>Snapdown Review</div><div id=review-content><ul><li>starting position with head around back of neck</li><li>pull opponents head and body down to the mat while moving back</li></ul>"
+        "review": "<div id=popup-content><div id=review-header class='subhead'>Snapdown Review</div><div id=review-content><ul><li>starting position with head around back of neck</li><li>pull opponents head and body down to the mat while moving back</li></ul><div id='returntolearn'></div></div>"
     },
 }
 
@@ -69,10 +69,10 @@ data_learn = {
         "name": "Penetration step",
         "abr": "ps",
         "video": "https://www.youtube.com/embed/W4jTOaaBxHQ?autoplay=1&amp;start=17&amp;end=28",
-        "review": ["body level lowers below opponent", 
-                    "front knee drops to ground",
-                    "back leg moves to front",
-                    "often used to set up attacks (coming next!)"]
+        "review": ["body level lowers below opponent",
+                   "front knee drops to ground",
+                   "back leg moves to front",
+                   "often used to set up attacks (coming next!)"]
     },
     2: {
         "id": 2,
@@ -80,8 +80,8 @@ data_learn = {
         "abr": "sl",
         "video": "https://www.youtube.com/embed/WsTqgJLhOaY?autoplay=1&amp;start=34&amp;end=33",
         "review": ["usually starts with a penetration step (as described before)",
-                    "ends with both hands around one leg",
-                    "used to destabilize and take down opponent"]
+                   "ends with both hands around one leg",
+                   "used to destabilize and take down opponent"]
     },
     3: {
         "id": 3,
@@ -89,8 +89,8 @@ data_learn = {
         "abr": "dl",
         "video": "https://www.youtube.com/embed/vRqWENxFFyo?autoplay=1&amp;start=25&amp;end=40",
         "review": ["usually starts from a penetration step",
-                    "body level starts low, then raises as opponent is picked up",
-                    "both opponents legs picked up"]
+                   "body level starts low, then raises as opponent is picked up",
+                   "both opponents legs picked up"]
     },
     4: {
         "id": 4,
@@ -98,8 +98,8 @@ data_learn = {
         "abr": "s",
         "video": "https://www.youtube.com/embed/6DYyE4pB7qs?autoplay=1&amp;start=8&amp;end=19",
         "review": ["move legs back to “fall” on opponent",
-                    "land with arched back, chest on opponents back",
-                    "defense usually in response to single and double leg attacks"]
+                   "land with arched back, chest on opponents back",
+                   "defense usually in response to single and double leg attacks"]
     },
     5: {
         "id": 5,
@@ -107,9 +107,9 @@ data_learn = {
         "abr": "gw",
         "video": "https://www.youtube.com/embed/r5k2tM7jb28?autoplay=1&amp;start=13&amp;end=38",
         "review": ["opponent is laying on the ground",
-        "locks hands around ribs",
-        "rotate hips to flip opponent"
-        ]
+                   "locks hands around ribs",
+                   "rotate hips to flip opponent"
+                   ]
     },
     6: {
         "id": 6,
@@ -117,18 +117,18 @@ data_learn = {
         "abr": "l",
         "video": "https://www.youtube.com/embed/KNphgR_IOy8?autoplay=1&amp;start=2:25&amp;end=2:44",
         "review": ["opponent is laying on the ground",
-        "cross opponents legs across each other near ankles",
-        "sit underneath and rotate to roll opponent"
-        ]
+                   "cross opponents legs across each other near ankles",
+                   "sit underneath and rotate to roll opponent"
+                   ]
     },
-        7: {
+    7: {
         "id": 7,
         "name": "Snapdown",
         "abr": "sn",
         "video": "https://www.youtube.com/embed/XHunumvrlTU?autoplay=1&amp;start=25&amp;end=37",
         "review": ["starting position with head around back of neck",
-        "pull opponents head and body down to the mat while moving back"
-        ]
+                   "pull opponents head and body down to the mat while moving back"
+                   ]
     }
 
 }
@@ -148,6 +148,7 @@ question_num = 0
 
 quiz_data = random.choices(list(data.values()), k=11)
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -164,7 +165,8 @@ def quiz(question_num=None):
         return render_template('quiz_mc.html', score=score, question_num=question_num, data=quiz_data[question_num])
     else:
         return render_template('quiz_sa.html', score=score, question_num=question_num, data=quiz_data[question_num])
-    
+
+
 @app.route('/check_answer', methods=['GET', 'POST'])
 def check_answer():
     global score
@@ -176,7 +178,7 @@ def check_answer():
     resultBool = False
 
     # search through moves for correct id
-    for p_id, p_info in data.items():    
+    for p_id, p_info in data.items():
         for key in p_info:
             if(key == "id"):
                 if(correct_id == p_info[key]):
@@ -186,15 +188,18 @@ def check_answer():
 
     return jsonify(score=score)
 
+
 @app.route('/quiz')
 def quiz2():
     return render_template('quiz_welcome.html')
+
 
 @app.route('/learn/<id>')
 def learn(id):
     id = int(id)
     learn_data = data_learn[id]
     return render_template('learn.html', learn_data=learn_data)
+
 
 @app.route('/scorePage')
 def getScore():

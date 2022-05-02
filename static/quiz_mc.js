@@ -59,12 +59,15 @@ function which_answer() {
 
 function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentID) {
     if (chosen_answer_id != currentID) {
-        $(chosen_answer_html_id + '-feedback').append(" ❌ ")
+        $(chosen_answer_html_id + '-feedback').append(" ❌ incorrect  ❌ ")
         $('#' + dict["video"] + '-feedback').append(" ✅ ")
         display_popup()
     } else {
-        $(chosen_answer_html_id + '-feedback').append(" ✅ ")
+        $(chosen_answer_html_id + '-feedback').append("✅ correct! ✅")
     }
+    display_next()
+    display_score()
+    $('input').attr("disabled",true);
 }
 
 function check_answer(info) {
@@ -100,13 +103,13 @@ function display_header() {
 }
 
 function display_video() {
-    $("#video").html("<video width='320' height='240' controls='muted autoplay'><source src='/static/" + dict["answer"] + "1.MP4.webm' type='video/mp4'>Your browser does not support the video tag</video>")
+    $("#video").html("<video class='video-fluid' controls muted autoplay><source src='/static/" + dict["answer"] + "1.MP4.webm' type='video/mp4'>Your browser does not support the video tag</video>")
     currentVidID = dict["id"]
 }
 
 function display_score() {
     q_so_far = parseInt(current_question) - 1
-    $("#score").text("Score: " + score + "/" + q_so_far)
+    $("#score").html("<span id='score-word'>Score: </span>" + score + "/" + q_so_far)
 }
 
 function display_next() {
@@ -136,7 +139,6 @@ function add_submit_functionality(){
         e.preventDefault();
         if (!submitted) {
             which_answer();
-            display_next()
         } else {
             alert("You've already submitted answer for this question")
             return
@@ -154,5 +156,5 @@ function display_incorrect(id) {
 
 function display_popup() {
     $("#popup").html(dict["review"])
-    $("#returntolearn").html("<a href='/learn/" + dict["id_learn"] + "'><button type='button' id='backtolearn-button'>Review the move: " + dict["name"] + "</button>")
+    $("#returntolearn").html("<a href='/learn/" + dict["id_learn"] + "'><button type='button' id='backtolearn-button'>Exit Quiz + Review the " + dict["name"] + "</button>")
 }

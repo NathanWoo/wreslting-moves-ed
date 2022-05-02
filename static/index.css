@@ -61,10 +61,10 @@ body, html {
 }
 
 .q-main {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-#review {
+.subhead {
   font-weight: bold;
   padding-bottom: 5px;
 }
@@ -79,7 +79,9 @@ body, html {
 #question-header{
   font-size: 20px;
   font-weight: bold;
-  margin-left: 20px;
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: x-large;
 }
 
 .move-title{
@@ -111,8 +113,22 @@ body, html {
   margin-top: 10px;
 }
 
+#score{
+  text-align: center;
+  border: solid 1px;
+  padding: 15px;
+  margin-left: 55px;
+  margin-right: 55px;
+}
+
+#score-word{
+  font-weight: bold;
+}
+
 #next_buttons{
-  margin-top: 10px;
+  text-align: right;
+  margin-top: -45px;
+  padding-left: -55px;
 }
 
 #popup{
@@ -127,4 +143,14 @@ body, html {
   color: #fcf9fa !important;
   padding: 12px;
   padding-left: 15px;
+}
+
+.feedback{
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+#popup-content{
+  border: solid 1px;
+  padding: 15px;
 }
