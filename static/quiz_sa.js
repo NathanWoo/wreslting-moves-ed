@@ -17,7 +17,6 @@ $(document).ready(function () {
         e.preventDefault();
         if (!submitted){
             which_answer();
-            display_next()
         } else {
             alert("You've already submitted answer for this question")
             return
@@ -69,6 +68,7 @@ function which_answer() {
     answer_info = { "answer_chosen": answerChosen, "correctID": currentVidID }
     check_answer(answer_info)
     submitted = true;
+    return answer_chosen
 }
 
 function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentID){
@@ -78,6 +78,7 @@ function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentID){
     } else {
         $("#symbol").append(" ✅ Correct!")
     }
+    display_next()
 }
 
 function check_answer(info) {
@@ -149,7 +150,7 @@ function add_next_functionality() {
 }
 
 function display_submit() {
-    $("#buttons").html("<button type='button' class='btn btn-primary' id='submit-button'>Submit</button>")
+    $("#next_buttons").html("<button type='button' class='btn btn-primary' id='submit-button'>Submit</button>")
 }
 
 function display_correct(id) {

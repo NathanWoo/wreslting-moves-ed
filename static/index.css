@@ -12,11 +12,20 @@
 
 body, html {
   height: 100%;
+  background-color: #fcf9fa;
+  font-family:'Georgia', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .btn{
-  background-color: hotpink;
-  border-color: #ff0000;
+  background-color:#f1d6e1;
+  color: #dc548a;
+  border-color: #dc548a;
+}
+
+.btn:hover {
+  background-color:#dc548a;
+  color: #fcf9fa;
+  border-color: #dc548a;
 }
 
 .btn-p{
@@ -26,17 +35,19 @@ body, html {
 .circular{
   border-radius: 50%;
   width: 100%;
+  
 }
 
 .index-title{
-  margin-top: 100px;
-  color: rgba(255, 13, 191);
-  font: italic 5em "Fira Sans", serif;
-  text-shadow: 2px 2px #ff0000;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #dc548a;
+  font: italic 4em "Georgia", serif;
 }
 
 .first-btn{
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 15px;
 }
 
 .move-title {
@@ -49,7 +60,7 @@ body, html {
 }
 
 .bg-pink{
-  background-color: #ff61b0;
+  background-color: #dc548a;
 }
 
 .q-main {
@@ -92,3 +103,12 @@ body, html {
   margin-top: 20px;
 }
 
+.test {
+  color:blue
+}
+
+.navbar-brand{
+  color: #fcf9fa !important;
+  padding: 12px;
+  padding-left: 15px;
+}
