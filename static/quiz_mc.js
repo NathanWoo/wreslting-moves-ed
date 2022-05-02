@@ -125,8 +125,12 @@ function add_next_functionality() {
         } else {
             nextquestion()
         }
-
     })
+    $(document).keyup(function(event) {
+        if (event.which === 13) {
+            $("#next-button").click();
+        }
+    });
 }
 
 function display_submit() {
@@ -144,6 +148,11 @@ function add_submit_functionality(){
             return
         }
     })
+    $(document).keyup(function(event) {
+        if (event.which === 13) {
+            $("#submit-button").click();
+        }
+    });
 }
 
 function display_correct(id) {

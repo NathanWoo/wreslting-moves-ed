@@ -22,6 +22,11 @@ $(document).ready(function () {
             return
         }
     })
+    $(document).keyup(function(event) {
+        if (event.which === 13) {
+            $("#submit-button").click();
+        }
+    });
 })
 
 function which_answer() {
@@ -145,6 +150,11 @@ function add_next_functionality() {
             nextquestion()
         }
     })
+    $(document).keyup(function(event) {
+        if (event.which === 13) {
+            $("#next-button").click();
+        }
+    });
 }
 
 function display_submit() {
@@ -161,5 +171,5 @@ function display_incorrect(id) {
 
 function display_popup() {
     $("#popup").html(dict["review"])
-    $("#returntolearn").html("<a href='/learn/"+dict["id_learn"]+"'><button type='button' class='btn btn-primary' id='backtolearn-button'>Review the move: "+dict["name"]+"</button>")
+    $("#returntolearn").html("<a href='/learn/"+dict["id_learn"]+"'><button type='button' class='btn btn-primary' id='backtolearn-button'>Exit + Review</button>")
 }

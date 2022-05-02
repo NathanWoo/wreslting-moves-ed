@@ -21,6 +21,11 @@ body, html {
   color:rgb(42, 38, 38)
 }
 
+#backtolearn-button{
+  text-align: center;
+  font-size: x-small;
+}
+
 .btn{
   background-color:#f1d6e1;
   color: #dc548a;
