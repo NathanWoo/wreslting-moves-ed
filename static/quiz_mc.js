@@ -109,7 +109,7 @@ function display_video() {
 
 function display_score() {
     q_so_far = parseInt(current_question) - 1
-    $("#score").html("<span id='score-word'>Score: </span>" + score + "/" + q_so_far)
+    $("#score").html("<span id='score-word'>Score: </span>" + score + "/10")
 }
 
 function display_next() {
