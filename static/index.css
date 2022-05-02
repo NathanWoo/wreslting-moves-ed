@@ -10,10 +10,15 @@
   padding: 20px 0px;
 }
 
+#user-shortans{
+  width: 95%;
+}
+
 body, html {
   height: 100%;
   background-color: #fcf9fa;
-  font-family:'Georgia', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family:'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(42, 38, 38)
 }
 
 .btn{
@@ -115,20 +120,25 @@ body, html {
 
 #score{
   text-align: center;
-  border: solid 1px;
   padding: 15px;
   margin-left: 55px;
   margin-right: 55px;
+  text-decoration: underline;
 }
 
 #score-word{
   font-weight: bold;
 }
 
-#next_buttons{
+.next_mc_positioning{
   text-align: right;
   margin-top: -45px;
   padding-left: -55px;
+}
+
+.next_sa_positioning{
+  text-align: right;
+  margin-right: 55px;
 }
 
 #popup{

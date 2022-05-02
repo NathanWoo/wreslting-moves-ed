@@ -113,7 +113,7 @@ function display_score() {
 }
 
 function display_next() {
-    $("#next_buttons").html("<button type='button' class='btn btn-primary' id='next-button'>Next</button>")
+    $("#next_buttons").html("<button type='button' class='btn btn-primary' id='next-button'>Continue</button>")
     add_next_functionality()
 }
 
@@ -156,5 +156,5 @@ function display_incorrect(id) {
 
 function display_popup() {
     $("#popup").html(dict["review"])
-    $("#returntolearn").html("<a href='/learn/" + dict["id_learn"] + "'><button type='button' id='backtolearn-button'>Exit Quiz + Review the " + dict["name"] + "</button>")
+    $("#returntolearn").html("<a href='/learn/" + dict["id_learn"] + "'><button type='button' id='backtolearn-button'>Exit + Review</button>")
 }

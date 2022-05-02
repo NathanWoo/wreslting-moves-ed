@@ -76,7 +76,7 @@ function answer_feedback(chosen_answer_html_id, chosen_answer_id, currentID){
         $("#symbol").append(" ❌ This is a <b>" + dict["name"] + "</b>")
         display_popup()
     } else {
-        $("#symbol").append(" ✅ Correct!")
+        $("#symbol").append(" ✅ <b> Correct! </b>")
     }
     display_next()
 }
@@ -118,8 +118,7 @@ function display_header() {
 }
 
 function display_video() {
-    //$("#video").html("<img src=/static/" + dict["video"] + ">")
-    $("#video").html("<video width='320' height='240' controls=muted autoplay><source src='/static/" + dict["answer"] + "2.MP4.webm' type='video/mp4'>Your browser does not support the video tag</video>")
+    $("#video").html("<video class='video-fluid' controls muted autoplay><source src='/static/" + dict["answer"] + "1.MP4.webm' type='video/mp4'>Your browser does not support the video tag</video>")
     currentVidID = dict["id"]
 }
 
@@ -129,11 +128,10 @@ function display_score() {
 }
 
 function display_next() {
-    $("#next_buttons").html("<button type='button' class='btn btn-primary' id='next-button'>Next</button>")
+    $("#next_buttons").html("<button type='button' class='btn btn-primary' id='next-button'>Continue</button>")
     if (parseInt(current_question) == 10) {
         $("#buttons").empty();
-        $("#next_buttons").html("<a href='/scorePage'><button>See Final Scores</button></a>")
-        display_submit();
+        $("#next_buttons").html("<a href='/scorePage'><button type='button' class='btn btn-primary' href='/scorePage' >See Final Scores</button></a>")
     }
     add_next_functionality()
 }

@@ -11,6 +11,64 @@
     let current_question = {{ question_num | tojson }}
 </script>
 
+<script>
+    let current_score = {{ score | tojson }}
+    let dict = {{ data | tojson }}
+    let score = {{ score | tojson }}
+    let current_question = {{ question_num | tojson }}
+</script>
+
+<div class="container-fluid q-main">
+<div class="row">
+    <div class="col-md-3">
+        <div id="score"></div>
+    </div>
+    <div class="col-md-6">
+        <div id="question-header"></div>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div id="video"></div>
+    </div>
+    <div class="col-md-3">
+        <div id="popup"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 material">
+        <div class="subhead">What move is this?</div>
+        <div class="row">
+            <div class="col-md-8">
+                <input type="text" id="user-shortans">
+            </div>
+            <div class="col-md-4">
+                <div id="next_buttons" class="next_sa_positioning"></div><div>
+                </div>
+            </div> 
+        </div>
+        <div id="symbol"></div>
+    </div>
+    <div class="col-md-3">   
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9">
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 
 <div class="container-fluid q-main">
     <div class="row">
         <div class="col-md-3">
@@ -49,7 +107,7 @@
     <div class="col-md-3" id="next_buttons">
     </div>
 </div>
-</div>
+</div> -->
 
 
 
