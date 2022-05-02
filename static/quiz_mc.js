@@ -165,5 +165,5 @@ function display_incorrect(id) {
 
 function display_popup() {
     $("#popup").html(dict["review"])
-    $("#returntolearn").html("<a href='/learn/" + dict["id_learn"] + "'><button type='button' id='backtolearn-button'>Exit + Review</button>")
+    $("#returntolearn").html("<a href='/learn/" + dict["id_learn"] + "'><button type='button' class='btn btn-primary' id='backtolearn-button'>Exit + Review</button>")
 }
